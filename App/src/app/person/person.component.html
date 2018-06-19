@@ -1,0 +1,59 @@
+<div class="container jumbotron">
+  <div class="row">
+    <ul>
+      <li>
+        <strong>Name:</strong> {{name}} </li>
+      <li>
+        <strong>Surname:</strong> {{surname}}</li>
+    </ul>
+  </div>
+  <div>
+    <p>
+      Lorem ipsum!
+    </p>
+    <hr>
+    <div>
+      <label for="name">Set Name</label>
+      <input type="text" name='name' #setNameInput placeholder='Enter Name' (keyup.enter)='setName(setNameInput.value)'>
+    </div>
+    <div>
+      <label for="surname">Set Surname</label>
+      <input type="text" name='surname' #setSurnameInput placeholder='Enter Surname' (keyup.enter)='setSurname(setSurnameInput.value)'>
+    </div>
+    <div>
+        <label for="nikname">Set Nikname</label>
+        <input type="text" name='nikname' #NiknameInput placeholder='Enter Nikname' (input)='inputNikname(NiknameInput.value)'>
+    </div>
+    <hr>
+    <p>{{Nikname}}</p>
+    <!-- <button class='btn btn-danger' (click)='getPerson()'>Get person!</button> -->
+    <hr>
+<!--//-->
+
+    <div>
+        <label for="name">Set Name</label>
+        <input type="text" #setname name='name'  (keyup.enter)='setNewName(setname.value)'>
+      </div>
+      <div>
+        <label for="surname">Set Surname</label>
+        <input type="text" [(ngModel)]='newName'>
+      </div>
+      <p>{{newName}}</p>
+<!-- // -->
+<hr>
+
+ <div>
+    <label for="person">Set Person</label>
+    <input type="text" [(ngModel)]='addNewPerson'>
+  </div>
+  <br>
+<button class='btn btn-danger' (click)='addPerson()'>Add person!</button>
+<p *ngIf='btnActive'>Persone Added!</p>
+<p *ngIf='!btnActive'>Persone Not Added!</p>
+
+<ul>
+  <li *ngFor="let item of personArr">{{item}}</li>
+</ul>
+
+  </div>
+</div>
