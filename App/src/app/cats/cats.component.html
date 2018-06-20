@@ -1,0 +1,30 @@
+<div class="container jumbotron">
+    <div class="row">
+    <hr>
+     <div>
+          <div>
+            <label for="cat">Add Cat</label>
+            <input type="text" [(ngModel)]='obj.addNewCatName'>
+          </div>
+          <div>
+            <label for="cat">Add Breed</label>
+            <input type="text" [(ngModel)]='obj.addNewCatBreed'>
+          </div>
+          <div>
+            <label for="cat">Add AlterEgo</label>
+            <input type="text" #catsName (input)='setName(catsName.value)'>
+          </div>
+          <br>
+          <button class='btn btn-danger' (click)='addCat()'>Add Cat!</button>
+          <p *ngIf='btnActive'>Cat Added!</p>
+          <p *ngIf='!btnActive'>Cat Not Added!</p>
+        </div>
+        <div>
+          <ul>
+            <li *ngFor="let item of catsArr"><strong>Name: {{item.addNewCatName}}</strong>
+              <br> Breed: {{item.addNewCatBreed}}
+              <br> AlterEgo: {{item.addNewCatAlterEgo}}</li>
+         </ul>
+         </div>
+    </div>
+</div>
