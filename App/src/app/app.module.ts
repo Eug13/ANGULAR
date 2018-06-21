@@ -7,17 +7,17 @@ import { CatsComponent } from './cats/cats.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    // PersonComponent,
-    CatsComponent,
-    HeroFormComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule
   ],
+  declarations: [
+    AppComponent,
+    // PersonComponent,
+    // CatsComponent,
+    HeroFormComponent
+  ],
   providers: [],
-  bootstrap: [AppComponent,CatsComponent]
+  bootstrap: [AppComponent,HeroFormComponent]
 })
 export class AppModule { }
