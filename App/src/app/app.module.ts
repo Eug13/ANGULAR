@@ -5,6 +5,9 @@ import { PersonComponent } from './person/person.component';
 import {FormsModule} from '@angular/forms';
 import { CatsComponent } from './cats/cats.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { CarsComponent } from './cars/cars.component';
+import { ViewCarComponent } from './view-car/view-car.component';
+import { InputCarComponent } from './input-car/input-car.component';
 
 @NgModule({
   imports: [
@@ -13,11 +16,14 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
   ],
   declarations: [
     AppComponent,
+    CarsComponent,
+    ViewCarComponent,
+    InputCarComponent
     // PersonComponent,
     // CatsComponent,
-    HeroFormComponent
+    // HeroFormComponent
   ],
   providers: [],
-  bootstrap: [AppComponent,HeroFormComponent]
+  bootstrap: [AppComponent,CarsComponent]
 })
 export class AppModule { }
