@@ -14,11 +14,13 @@ export class HeroFormComponent {
   model = new HeroComponent(18, 'Evgeniy', this.powers[0], 'FrontEnder');
 
   heros = [];
-
+  count = 0;
   submitted = false;
 
   onSubmit(e) { 
+    this.count++;
    const HERO = {
+     id:this.count,
      name:this.model.name,
      alterEgo:this.model.alterEgo,
      power:this.model.power   
