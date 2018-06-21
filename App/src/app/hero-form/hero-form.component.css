@@ -4,3 +4,10 @@ li{
 strong{
     color:red;
 }
+.hero_id{
+    font-size: 40px;
+    font-weight: bold;
+    color:rgb(118, 172, 226);
+}
+
+.pad{padding:25px 35px}

@@ -35,22 +35,14 @@
     <ul>
       <li *ngFor="let hero of heros">
           <div class="row">
-              <div class="col-xs-3"><strong>ID:</strong></div>
-              <div class="col-xs-9  pull-left"> {{ hero.id }}</div>
-            </div>
-        <div class="row">
-          <div class="col-xs-3"><strong>Name:</strong></div>
-          <div class="col-xs-9  pull-left"> {{ hero.name }}</div>
-        </div>
-        <div class="row">
-          <div class="col-xs-3"><strong>Alter Ego:</strong></div>
-          <div class="col-xs-9 pull-left"> {{ hero.alterEgo }}</div>
-        </div>
-        <div class="row">
-          <div class="col-xs-3"><strong>Power:</strong></div>
-          <div class="col-xs-9 pull-left"> {{ hero.power }}</div>
-        </div>
-        <br>
+              <div class="col-xs-3 pull-left"><span class='hero_id'>{{ hero.id }}</span></div>
+              <div class="col-xs-1 pad"><strong>Name:</strong></div>
+              <div class="col-xs-2 pad pull-left"> {{ hero.name }}</div>
+              <div class="col-xs-1 pad"><strong>Alter Ego:</strong></div>
+              <div class="col-xs-2 pad pull-left"> {{ hero.alterEgo }}</div>
+              <div class="col-xs-1 pad"><strong>Power:</strong></div>
+              <div class="col-xs-2 pad pull-left"> {{ hero.power }}</div>
+          </div>
         <hr>
       </li>
     </ul>
