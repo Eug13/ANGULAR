@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <p class='p'>
+    <p [ngClass]="{'audi':checkCar(singleCar.name)}">
       <strong> Car:</strong> {{singleCar.name}}
       <br>
       <strong> Trial:</strong> {{singleCar.trial}}
