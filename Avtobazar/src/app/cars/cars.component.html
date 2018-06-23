@@ -1,0 +1,10 @@
+<div class="container">
+ 
+
+  <app-input-car (newCar)='updateCar($event)'></app-input-car>
+
+
+  <app-view-car *ngFor='let car of cars' [singleCar]='car'></app-view-car>
+
+
+</div>

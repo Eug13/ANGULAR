@@ -1,0 +1,51 @@
+<div class="container">
+  <div >
+    <h1>Add Hero</h1>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="power">Hero Power</label>
+        <select class="form-control" id="power" required [(ngModel)]="model.power" name="power" #power="ngModel">
+          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        </select>
+        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+          Power is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-danger" [disabled]="!heroForm.form.valid">Add Hero</button>
+      <!-- <button type="button" class="btn btn-danger" (click)="newHero(); heroForm.reset()">New Hero</button> -->
+    </form>
+  </div>
+<br><br>
+  <div [hidden]="!submitted">
+    <h2>List of Heros:</h2>
+    <ul>
+      <li *ngFor="let hero of heros">
+          <div class="row">
+              <div class="col-xs-3 pull-left"><span class='hero_id'>{{ hero.id }}</span></div>
+              <div class="col-xs-1 pad"><strong>Name:</strong></div>
+              <div class="col-xs-2 pad pull-left"> {{ hero.name }}</div>
+              <div class="col-xs-1 pad"><strong>Alter Ego:</strong></div>
+              <div class="col-xs-2 pad pull-left"> {{ hero.alterEgo }}</div>
+              <div class="col-xs-1 pad"><strong>Power:</strong></div>
+              <div class="col-xs-2 pad pull-left"> {{ hero.power }}</div>
+          </div>
+        <hr>
+      </li>
+    </ul>
+  </div>
+
+</div>

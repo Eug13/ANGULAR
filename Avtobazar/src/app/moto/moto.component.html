@@ -1,0 +1,10 @@
+<div class="container">
+ 
+
+    <app-moto-input (newMoto)='updateMoto($event)'></app-moto-input>
+  
+  
+    <app-moto-view *ngFor='let moto of motos' [singleMoto]='moto'></app-moto-view>
+  
+  
+  </div>
