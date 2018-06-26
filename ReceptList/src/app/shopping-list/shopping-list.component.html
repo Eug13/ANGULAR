@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-12 button">
+      <!-- <button class='btn btn-danger'>Add New Recept</button> -->
+    </div>
+    <div class="col-xs-12">
+      <ul *ngFor='let shopping of shoppings'>
+        <li class='list'>
+          <h5>{{shopping.name}}</h5>
+          <p>{{shopping.amount}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>

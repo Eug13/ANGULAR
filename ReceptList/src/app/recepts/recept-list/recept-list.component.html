@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12 button">
+    <button class='btn btn-danger'>Add New Recept</button>
+  </div>
+  <div class="col-xs-12">
+    <ul *ngFor='let recept of recepts'>
+      <li class='list'>
+        <h3>{{recept.name}}</h3>
+        <p>{{recept.description}}</p>
+        <img src='{{recept.imgPath}}' alt='recept name'>
+        <div>
+            <app-shopping-list></app-shopping-list>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
