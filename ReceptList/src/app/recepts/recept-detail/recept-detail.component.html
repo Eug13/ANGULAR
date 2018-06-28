@@ -1,7 +1,9 @@
 <div class='recept-edit'>
   <h3>RECEPT DETAILS:</h3>
     <app-recept-edit></app-recept-edit>
-    <div *ngIf="recept">
-      {{recept.name}}
-    </div>
+    <p>
+    {{recept.name}}
+    {{recept.description}}
+  </p>
+    <img src='{{recept.imgPath}}'>
 </div>

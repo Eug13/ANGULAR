@@ -1,7 +1,13 @@
-<div class="col-md-7">
-  <app-recept-list></app-recept-list>
-</div>
+<div class="row">
 
-<div class="col-md-5">
-  <!-- <app-recept-detail></app-recept-detail> -->
+  <div class="col-md-6">
+    <app-recept-list (selectedRecept)="getRecept($event)"></app-recept-list>
+  </div>
+  <div class="col-md-6">
+    <app-recept-detail [recept]='recept' *ngIf="recept; else infoText"></app-recept-detail>
+  </div>
+
+  <ng-template #infoText>
+    <p>NOT SELECTED!</p>
+  </ng-template>
 </div>

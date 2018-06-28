@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { ReceptsComponent } from './recepts/recepts.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
@@ -9,6 +9,7 @@ import { ReceptDetailComponent } from './recepts/recept-detail/recept-detail.com
 import { HeaderComponent } from './header/header.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ReceptEditComponent } from './recepts/recept-detail/recept-edit/recept-edit.component';
+import { ReceptItemComponent } from './recepts/recept-list/recept-item/recept-item.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,12 @@ import { ReceptEditComponent } from './recepts/recept-detail/recept-edit/recept-
     ReceptDetailComponent,
     HeaderComponent,
     ShoppingEditComponent,
-    ReceptEditComponent
+    ReceptEditComponent,
+    ReceptItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

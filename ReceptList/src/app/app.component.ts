@@ -7,5 +7,12 @@ import {ReceptListComponent} from './recepts/recept-list/recept-list.component'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'RecipeList';
+  title = 'THE BOOK OF RECEPTS!';
+
+  loadedRoute = 'recepts';
+
+  navigate(route:string){
+    this.loadedRoute = route;
+    console.log(route);
+  }
 }
