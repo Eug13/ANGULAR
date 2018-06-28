@@ -1,5 +1,5 @@
 
-export class Recept{
+export class Recept {
     name: string;
     description: string;
     imgPath: string;
