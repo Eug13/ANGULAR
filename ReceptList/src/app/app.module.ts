@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ReceptEditComponent } from './recepts/recept-detail/recept-edit/recept-edit.component';
 import { ReceptItemComponent } from './recepts/recept-list/recept-item/recept-item.component';
+import { DropDirective } from './directives/drop.directive';
+import { ReceptsService } from './recepts/recepts.service';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,14 @@ import { ReceptItemComponent } from './recepts/recept-list/recept-item/recept-it
     HeaderComponent,
     ShoppingEditComponent,
     ReceptEditComponent,
-    ReceptItemComponent
+    ReceptItemComponent,
+    DropDirective
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ReceptsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

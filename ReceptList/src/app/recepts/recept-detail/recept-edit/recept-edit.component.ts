@@ -11,5 +11,5 @@ export class ReceptEditComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

@@ -1,4 +1,6 @@
 import { Component,Input } from '@angular/core';
+import { ReceptsService } from '../../recepts.service';
+
 
 @Component({
   selector: 'app-recept-item',
@@ -7,7 +9,14 @@ import { Component,Input } from '@angular/core';
 })
 export class ReceptItemComponent{
 
-  constructor() { }
+  constructor(private receptsServise:ReceptsService) {
+
+   }
+
+onSelected(){
+  this.receptsServise.receptSelect.emit(this.recept);
+}
+
 @Input() recept;
 
 }
