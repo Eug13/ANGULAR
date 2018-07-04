@@ -17,8 +17,5 @@ ngOnInit(){
     this.recept = recept;
   })
 }
-  //  getRecept(recept){
-  //     this.recept = recept;
-  //  }
 
 }

@@ -3,11 +3,16 @@
       <!-- <button class='btn btn-danger'>Add New Recept</button> -->
     </div>
     <div class="col-xs-12">
-      <ul *ngFor='let shopping of shoppings'>
-        <li class='list'>
-          <h5>{{shopping.name}}</h5>
-          <p>{{shopping.amount}}</p>
-        </li>
+      <ul>
+         <app-shopping-item *ngFor='let shopping of shoppings'  [shopping]='shopping'></app-shopping-item>
       </ul>
     </div>
+
+    <div class="col-md-12">
+        <app-shopping-edit  *ngIf="shopping; else infoText" ></app-shopping-edit>
+    </div>
   </div>
+
+    <ng-template #infoText>
+      <p>NOT SELECTED!</p>
+    </ng-template>

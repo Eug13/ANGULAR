@@ -13,6 +13,5 @@ export class AppComponent {
 
   navigate(route:string){
     this.loadedRoute = route;
-    console.log(route);
   }
 }
