@@ -1,5 +1,5 @@
 
-export class Shopping{
+export class Ingridient{
     name: string;
     amount: number;
    

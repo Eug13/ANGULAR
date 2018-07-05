@@ -15,11 +15,11 @@ export class ShoppingItemComponent {
   }
 
 onShopping(){
- this.shoppingsServise.shoppingSelect.emit(this.shopping);
- console.log(this.shopping.name)
+ this.shoppingsServise.shoppingSelect.emit(this.ingridient);
+ console.log(this.ingridient)
 }
 
-@Input() shopping;
+@Input() ingridient;
 
 }
 

@@ -1,17 +1,15 @@
 <div class="row">
-    <div class="col-md-12 button">
-      <!-- <button class='btn btn-danger'>Add New Recept</button> -->
-    </div>
     <div class="col-xs-12">
       <ul>
-         <app-shopping-item *ngFor='let shopping of shoppings'  [shopping]='shopping'></app-shopping-item>
+         <app-shopping-item *ngFor='let ingridient of ingridients'  [ingridient]='ingridient'></app-shopping-item>
       </ul>
     </div>
 
     <div class="col-md-12">
-        <app-shopping-edit  *ngIf="shopping; else infoText" ></app-shopping-edit>
+        <app-shopping-edit ></app-shopping-edit>
     </div>
   </div>
+
 
     <ng-template #infoText>
       <p>NOT SELECTED!</p>

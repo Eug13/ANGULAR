@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Shopping} from './shopping-model'
+import { Ingridient } from './shopping-model'
 import { ShoppingService } from './shopping.service';
 
 @Component({
@@ -9,17 +9,18 @@ import { ShoppingService } from './shopping.service';
 })
 export class ShoppingListComponent implements OnInit {
 
-  shoppings:Shopping[];
+  ingridients: Ingridient[];
 
-  constructor(private shoppingsServise:ShoppingService) { 
+  constructor(private shoppingsServise: ShoppingService) {
 
   }
 
 
- ngOnInit(): void {
-  this.shoppings = this.shoppingsServise.getShopping();
-  
-}
+  ngOnInit(): void {
+    this.ingridients = this.shoppingsServise.getIngridients();
+    this.shoppingsServise.ingridientChanged.subscribe((ingridients: Ingridient[]) => { this.ingridients = ingridients });
+
+  }
 
 
 

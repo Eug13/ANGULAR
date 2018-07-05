@@ -6,4 +6,12 @@
     {{recept.description}}
   </p>
     <img src='{{recept.imgPath}}'>
+
+    <ul class="list-group">
+     <li
+       class="list-group-item"
+       *ngFor="let ingridient of recept.ingridients">
+       {{ ingridient.name }} - {{ ingridient.amount }}
+     </li>
+   </ul>
 </div>
