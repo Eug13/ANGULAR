@@ -1,4 +1,6 @@
-import { Component,Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Ingridient } from '../../shopping-list/shopping-model';
+import { ShoppingService } from '../../shopping-list/shopping.service';
 
 @Component({
   selector: 'app-recept-detail',
@@ -7,6 +9,20 @@ import { Component,Input } from '@angular/core';
 })
 export class ReceptDetailComponent {
 
-@Input() recept;
+  @Input() recept;
 
-}
+  constructor(private shoppingsServise:ShoppingService) { 
+
+  }
+
+  addToShoppingList() {
+    const ingridient = this.recept.ingridients;
+    console.log(ingridient)
+  
+    const item = new Ingridient(ingridient.name,+ingridient.amount);
+    this.shoppingsServise.addFrom(ingridient);
+    }
+
+  }
+
+

@@ -21,6 +21,12 @@ add(item){
   console.log(this.ingridients)
 }
 
+addFrom(item){
+  this.ingridients.push(...item);
+  this.ingridientChanged.emit(this.ingridients.slice())
+  console.log(this.ingridients)
+}
+
     getIngridients(): Ingridient[] {
         return this.ingridients.slice();//getter for private array 
 

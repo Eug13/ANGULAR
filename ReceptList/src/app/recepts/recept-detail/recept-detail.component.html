@@ -13,5 +13,6 @@
        *ngFor="let ingridient of recept.ingridients">
        {{ ingridient.name }} - {{ ingridient.amount }}
      </li>
+     <button class='btn btn-success' (click)='addToShoppingList()'>Add to shopping list</button>
    </ul>
 </div>
