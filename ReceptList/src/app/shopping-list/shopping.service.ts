@@ -15,13 +15,7 @@ export class ShoppingService {
 
   ]
 
-add(item){
-  this.ingridients.push(item);
-  this.ingridientChanged.emit(this.ingridients.slice())
-  console.log(this.ingridients)
-}
-
-addFrom(item){
+add(...item){
   this.ingridients.push(...item);
   this.ingridientChanged.emit(this.ingridients.slice())
   console.log(this.ingridients)

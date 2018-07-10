@@ -5,6 +5,9 @@
   </div>
   <div class="col-xs-12">
     <ul>
-      <app-recept-item *ngFor=' let recept of recepts' [recept]='recept' ></app-recept-item>
+      <app-recept-item *ngFor=' let recept of recepts | async'
+      [class.selected]="recept.id === selectedId" [recept]='recept' >
+    
+    </app-recept-item>
     </ul>
   </div>

@@ -14,6 +14,7 @@ import { ReceptItemComponent } from './recepts/recept-list/recept-item/recept-it
 import { DropDirective } from './directives/drop.directive';
 import { ReceptsService } from './recepts/recepts.service';
 import { ShoppingService } from './shopping-list/shopping.service';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ShoppingService } from './shopping-list/shopping.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [ReceptsService,ShoppingService],
   bootstrap: [AppComponent]
