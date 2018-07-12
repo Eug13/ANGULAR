@@ -1,9 +1,8 @@
 
-    <li class='list' (click)='onSelected()' routerLink="/recepts/:id">
-      <h3>{{recept.name}}</h3>
-      <p><strong>{{recept.description}}</strong></p>
-      <img src='{{recept.imgPath}}' alt='recept name'>
-      <a [routerLink]="['/recept', recept.id]">
-        <span class="badge">{{ recept.id }}</span>{{ recept.name }}
-      </a>
-    </li>
+<li class='list'  routerLink="/recepts/{{recept.id}}"  (click)='onSelected'>
+  <h3>{{recept.name}}</h3>
+  <p>
+    <strong>{{recept.description}}</strong>
+  </p>
+  <img src='{{recept.imgPath}}' alt='recept name'>
+</li>
