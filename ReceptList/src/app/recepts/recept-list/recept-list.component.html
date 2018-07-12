@@ -5,7 +5,7 @@
   </div>
   <div class="col-xs-12">
     <ul>
-      <app-recept-item *ngFor=' let recept of recepts'[recept]='recept' >  
+      <app-recept-item *ngFor=" let recept of recepts; let i = index"  [recept]='recept' [index]="i" >  
     </app-recept-item>
     </ul>
   </div>

@@ -15,6 +15,8 @@ import { DropDirective } from './directives/drop.directive';
 import { ReceptsService } from './recepts/recepts.service';
 import { ShoppingService } from './shopping-list/shopping.service';
 import { AppRoutingModule } from './app.routing.module';
+import { BaseComponent } from './recepts/base/base.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { AppRoutingModule } from './app.routing.module';
     ShoppingEditComponent,
     ReceptEditComponent,
     ReceptItemComponent,
-    DropDirective
+    DropDirective,
+    BaseComponent
   ],
   imports: [
     BrowserModule,

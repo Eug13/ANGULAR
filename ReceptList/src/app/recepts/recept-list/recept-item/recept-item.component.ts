@@ -1,5 +1,6 @@
-import { Component,Input,Output,EventEmitter } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { ReceptsService } from '../../recepts.service';
+import { Recept } from '../../recepts.model'
 
 
 @Component({
@@ -7,22 +8,9 @@ import { ReceptsService } from '../../recepts.service';
   templateUrl: './recept-item.component.html',
   styleUrls: ['./recept-item.component.css']
 })
-export class ReceptItemComponent{
-  @Input() recept;
+export class ReceptItemComponent {
 
-
-  @Output() routeSelected = new EventEmitter<string>();
-  constructor(private receptsServise:ReceptsService) {
-
-   }
-
-onSelected(){
-  this.receptsServise.receptSelect.emit(this.recept);
-}
-
-onSelect(route:string){
-  this.routeSelected.emit(route);
-}
-
+  @Input() recept:Recept;
+  @Input()index:number;
 
 }

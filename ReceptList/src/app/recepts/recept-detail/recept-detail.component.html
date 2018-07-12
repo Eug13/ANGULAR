@@ -1,7 +1,14 @@
 <div class='recept-edit'>
   <h3>RECEPT DETAILS:</h3>
-    <app-recept-edit></app-recept-edit>
-    {{recept.id}}
+  <div class="dropdown"  appDrop>
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        Manage
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" appDrop>
+        <a class="dropdown-item" routerLink='edit'>EDIT</a>
+        <a class="dropdown-item" href="#">DELETE</a>
+      </div>
+    </div>
     <p>
     {{recept.name}}
     {{recept.description}}

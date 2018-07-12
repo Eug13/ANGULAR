@@ -4,10 +4,13 @@
     <app-recept-list></app-recept-list>
   </div>
   <div class="col-md-6">
-    <app-recept-detail [recept]='recept' *ngIf="recept; else infoText"></app-recept-detail>
+    <router-outlet></router-outlet>
+    <!-- <app-recept-detail [recept]='recept' *ngIf="recept; else infoText"></app-recept-detail> -->
   </div>
-
+<!-- 
   <ng-template #infoText>
+      <app-base></app-base>
     <p>NOT SELECTED!</p>
-  </ng-template>
+    
+  </ng-template> -->
 </div>

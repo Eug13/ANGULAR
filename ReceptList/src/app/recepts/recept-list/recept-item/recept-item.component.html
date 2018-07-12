@@ -1,5 +1,5 @@
 
-<li class='list'  routerLink="/recepts/{{recept.id}}"  (click)='onSelected'>
+<li class='list'  [routerLink]="[index]" routerLinkActive="active">
   <h3>{{recept.name}}</h3>
   <p>
     <strong>{{recept.description}}</strong>

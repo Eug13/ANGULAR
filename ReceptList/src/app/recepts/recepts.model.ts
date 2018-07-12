@@ -6,8 +6,7 @@ export class Recept {
     description: string;
     imgPath: string;
     ingridients:Ingridient[];
-    constructor(id : number, name: string, description: string, imgPath: string, ingridients:Ingridient[]) {
-        this.id = id;
+    constructor( name: string, description: string, imgPath: string, ingridients:Ingridient[]) {
         this.name = name;
         this.description = description;
         this.imgPath = imgPath;
