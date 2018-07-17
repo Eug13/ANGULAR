@@ -6,6 +6,8 @@ import {ReceptItemComponent} from './recepts/recept-list/recept-item/recept-item
 import {ReceptDetailComponent} from './recepts/recept-detail/recept-detail.component'
 import { BaseComponent } from './recepts/base/base.component';
 import { ReceptEditComponent } from './recepts/recept-detail/recept-edit/recept-edit.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component'
+import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-item.component';
 
 
 
@@ -14,11 +16,15 @@ const appRouter: Routes = [
  children:[
      {path:'', component:BaseComponent},
      {path:':id',component:ReceptDetailComponent},
-     {path:':id/edit',component:ReceptEditComponent}
+     {path:':id/edit',component:ShoppingEditComponent}
 
  ]
 },
-    { path: 'shopping-list', component: ShoppingListComponent },
+    { path: 'shopping-list', component: ShoppingListComponent,
+    children:[
+        {path:'edit-item',component:ShoppingItemComponent}
+    ]
+},
     { path: '', redirectTo: '/recepts', pathMatch: 'full' }
 ];
 

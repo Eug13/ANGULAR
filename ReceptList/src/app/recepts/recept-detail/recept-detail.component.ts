@@ -15,7 +15,7 @@ export class ReceptDetailComponent implements OnInit {
 
   recept: Recept;
   id: number;
-  
+ 
 
   constructor(
     private receptServise: ReceptsService,
@@ -30,6 +30,7 @@ export class ReceptDetailComponent implements OnInit {
     console.log(ingridients)
     this.shoppingsServise.add(...ingridients);
   }
+
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {

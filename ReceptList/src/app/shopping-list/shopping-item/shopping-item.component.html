@@ -3,4 +3,8 @@
     <strong>{{ingridient.name}}</strong>
     <p>{{ingridient.amount}}</p>
   </span>
+  <button class='btn btn-success' routerLink='edit-item' (click)='onEdit()'>Edit</button>
+  <button class='btn btn-danger' (click)='onDelete()'>Delete</button>
 </li>
+
+
