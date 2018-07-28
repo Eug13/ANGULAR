@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
-    <p [ngClass]="{'audi':checkCar(singleCar.name)}">
-      <strong> Car:</strong> {{singleCar.name}}
-      <br>
-      <strong> Trial:</strong> {{singleCar.trial}}
-    </p>
+    <div>
+        <strong> Week:</strong> {{singleCar.counter}}  &nbsp;&nbsp;
+        <strong> Weight:</strong> {{singleCar.name}}   &nbsp;&nbsp;
+        <strong>Hard training :</strong> {{singleCar.times}}X{{singleCar.rutine}}   &nbsp;&nbsp;
+          <strong>Recovery training :</strong> {{singleCar.six}}X{{singleCar.rec}}
+    </div>
   </div>
 </div>

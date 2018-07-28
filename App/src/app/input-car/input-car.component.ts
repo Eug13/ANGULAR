@@ -1,4 +1,4 @@
-import { Component, OnInit,Output ,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input-car',
@@ -7,19 +7,56 @@ import { Component, OnInit,Output ,EventEmitter } from '@angular/core';
 })
 
 export class InputCarComponent {
-carName ='BMW';
-carTrial = 1000;
+  carName = null;
 
-@Output('newCar') newCar = new EventEmitter<{name:string,trial:number}>();
 
-addCar(){
-this.newCar.emit({
-  name:this.carName,
-  trial:this.carTrial
-});
-this.carName = '';
-this.carTrial = null;
-}
+  @Output('newCar') newCar = new EventEmitter<{ name: number,counter:number,times:number,rutine:number,six:number,rec:number }>();
+
+  addCar() {
+    let count = 1;
+    let step = 85;
+    let input = Number(this.carName)
+    let weight = input*80/100 ;
+    let goal = null;
+
+    let times = Number(6);
+    let rec = Number(2);
+    let rutine = Number(2);
+    let six = Number(6);
+    // let goal = input*(80+5)/100;
+
+    while (count < 5) {
+      rutine++
+      this.createWeeks(count,weight,times,rutine,six,rec)
+      count++
+    }
+
+
+    while(count<10){
+      goal = input*step/100;
+      times--
+      rutine--
+      this.createWeeks(count,goal,times,rutine,six,rec)
+      count++
+      step+=5;
+    }
+    this.carName = null;
+
+  }
+
+  createWeeks(count,goal,times,rutine,six,rec) {
+
+
+    this.newCar.emit({
+      name: goal,
+      counter:count,
+      times:times,
+      rutine:rutine,
+      six:six,
+      rec:rec
+    });
+    // this.carName = null;
+  }
 
 
 

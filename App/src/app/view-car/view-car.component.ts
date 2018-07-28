@@ -9,12 +9,12 @@ import { Component, Input } from '@angular/core';
 
 export class ViewCarComponent {
 
-  @Input('singleCar') singleCar: { name: string, trial: number };
+  @Input('singleCar') singleCar: { name: number ,counter:number};
 
   constructor() { }
 
   checkCar(car) {
-    if (car === 'audi') {
+    if (car === 0) {
       return true;
     }
     else {
