@@ -1,44 +1,21 @@
 import { Training } from './training.model'
 import { EventEmitter } from '@angular/core';
-
+import { InputCarComponent } from './../input-car/input-car.component'
 
 export class TrainingService {
+    cars = [];
 
-//   shoppingSelect = new EventEmitter<Ingridient[]>();
+    constructor() { }
 
-//   ingridientChanged = new EventEmitter<Ingridient[]>();
-
-
-//   private ingridients: Ingridient[] = [
-//     new Ingridient('Meat', 2),
-//     new Ingridient('Chease', 3)
-
-//   ]
-
-//   add(...item) {
-//     this.ingridients.push(...item);
-//     this.ingridientChanged.emit(this.ingridients.slice())
-//     console.log(this.ingridients)
-//   }
-
-//   edit(item){
-    
-//   }
+    updateCar(car: { name: number, counter: number }) {
+        this.cars.push(car);
+        console.log(this.cars)
+    }
 
 
-//   delete(item) {
-//     let index = this.ingridients.indexOf(item);
-//     if (index > -1) {
-//       this.ingridients.splice(index, 1)
-//       this.ingridientChanged.emit(this.ingridients);
-   
-//     }
-//   }
+    getTraining() {
+        return this.cars;
+    }
 
-//   getIngridients(): Ingridient[] {
-   
-//     return this.ingridients.slice();//getter for private array 
-
-//   }
 
 }

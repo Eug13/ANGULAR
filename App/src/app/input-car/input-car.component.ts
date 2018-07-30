@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+// import {TrainingService} from './../cars/training.servise'
 
 @Component({
   selector: 'app-input-car',
@@ -8,6 +9,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 export class InputCarComponent {
   carName = null;
+
 
 
   @Output('newCar') newCar = new EventEmitter<{ name: number,counter:number,times:number,rutine:number,six:number,rec:number }>();
@@ -60,7 +62,7 @@ export class InputCarComponent {
 
 
 
-  constructor() { }
+
 
 
 }
