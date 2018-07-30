@@ -1,10 +1,42 @@
 <div class="container">
   <div class="row">
-    <div>
-        <strong> Week:</strong> {{singleCar.counter}}  &nbsp;&nbsp;
-        <strong> Weight:</strong> {{singleCar.name}}   &nbsp;&nbsp;
-        <strong>Hard training :</strong> {{singleCar.times}}X{{singleCar.rutine}}   &nbsp;&nbsp;
-          <strong>Recovery training :</strong> {{singleCar.six}}X{{singleCar.rec}}
+    <div class='view'>
+      <div>
+        <span class='info'> Week:</span>
+        <span class='item'>{{singleCar.counter}} </span> &nbsp;&nbsp;
+        <span class='info'> Weight:</span>
+        <span class='item'> {{singleCar.name}} </span> &nbsp;&nbsp;
+      </div>
+
+      <strong>Hard training :</strong>
+      <span class='itemTraining'>{{singleCar.times}}
+
+<div class='inline' [ngClass]="targetClass">
+
+        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
+        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
+        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
+        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
+        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
+        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
+</div>
+
+      </span> 
+
+      <div class='recovery'>
+        <strong>Recovery training :</strong>
+        <span class='itemTraining'>{{singleCar.six}}
+
+          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
+
+        </span>
+      </div>
+
     </div>
   </div>
 </div>

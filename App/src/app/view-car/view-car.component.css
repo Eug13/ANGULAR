@@ -1,9 +1,67 @@
-.p{
-    border:1px solid white;
-    padding:20px 20px;
+.view{
     margin:20px 0;
+    padding:20px;
+    border:1px solid white;
+    border-radius:5px 5px 5px 5px;
+    width:100%;
+    background-color: #222223;
 }
 
-.audi{
+strong{
+    color:white;
+    font-size: 25px;
+    display: inline-block;
+    width:320px;
+    margin-right:10px;
+}
+
+.info{
+    color:white;
+    font-size: 25px;
+    margin-right:10px;
+    width:320px;
+}
+
+.item{
+    font-size: 30px;
     color:red;
+}
+.itemTraining{
+    color:lightblue;
+    font-size: 25px;
+}
+
+.round{
+    color:lightblue;
+    font-size: 25px;
+    display: inline-block;
+    width: 40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid white;
+    text-align: center;
+    margin:0 10px;
+}
+
+.round:hover{
+    background-color: red;
+    color:white;
+    cursor:pointer;
+}
+
+.new{
+    background-color: red;
+    color:white;
+}
+
+.recovery{
+    margin-top:20px;
+}
+
+.disabled{
+    display: none;
+}
+
+.inline{
+    display: inline-block;
 }

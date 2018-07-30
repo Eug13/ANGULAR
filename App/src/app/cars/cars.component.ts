@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsComponent {
 
-  // cars:[{name:string,trial:number}] = [{name:'Audi',trial:1000}];
 cars=[];
   constructor() { }
 

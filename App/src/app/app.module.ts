@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import { CarsComponent } from './cars/cars.component';
 import { ViewCarComponent } from './view-car/view-car.component';
 import { InputCarComponent } from './input-car/input-car.component';
+import { TrainingService } from './cars/training.servise';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { InputCarComponent } from './input-car/input-car.component';
     ViewCarComponent,
     InputCarComponent
   ],
-  providers: [],
+  providers: [TrainingService],
   bootstrap: [AppComponent,CarsComponent]
 })
 export class AppModule { }
