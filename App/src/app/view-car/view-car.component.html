@@ -1,15 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class='view' [style.display]="getStyle()">
+    <div class='view' [style.background-color]="getStyle()" [style.display]="allDone()">
       <div>
         <span class='info'> Week:</span>
-        <span class='item'>{{singleCar.counter}} </span> &nbsp;&nbsp;
+        <span class='item'>{{singleCar.counter}}</span> &nbsp;&nbsp;
         <span class='info'> Weight:</span>
-        <span class='item'> {{singleCar.name}} </span> &nbsp;&nbsp;
+        <span class='item'> {{singleCar.name}}</span> &nbsp;&nbsp;
       </div>
 
       <strong>Hard training :</strong>
-      <span class='itemTraining'>{{singleCar.times}}
+      <span class='itemTraining'>
+        
+        <!-- {{singleCar.times}} -->
 
 <div class='inline' *ngIf="singleCar.times === 6" >
         <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
@@ -56,7 +58,8 @@
 
       <div class='recovery'>
         <strong>Recovery training :</strong>
-        <span class='itemTraining'>{{singleCar.six}}
+        <span class='itemTraining'>
+          <!-- {{singleCar.six}} -->
 
           <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
           <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
@@ -67,6 +70,8 @@
 
         </span>
       </div>
+
+      <button class='btn btn-danger disabled' [style.display]="getDone()"  (click)='done = true' (click)="remove()">Done</button>
 
     </div>
   </div>

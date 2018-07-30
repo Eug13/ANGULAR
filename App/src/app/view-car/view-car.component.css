@@ -59,9 +59,13 @@ strong{
 }
 
 .disabled{
+    margin-top:20px;
+    cursor:pointer;
     display: none;
+    
 }
 
 .inline{
     display: inline-block;
+    
 }

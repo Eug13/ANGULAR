@@ -13,7 +13,14 @@ export class CarsComponent implements OnInit {
 
   updateCar(car: { name: number, counter: number }) {
     this.cars.push(car);
-    console.log(this.cars)
+    // console.log(this.cars)
+    localStorage.setItem('array', JSON.stringify(this.cars));
+  }
+
+  deleteCar(car: { name: number, counter: number }){
+    console.log('woohoo!')
+    this.cars.shift();
+    localStorage.clear();
     localStorage.setItem('array', JSON.stringify(this.cars));
   }
 
