@@ -10,68 +10,68 @@
 
       <strong>Hard training :</strong>
       <span class='itemTraining'>
-        
+
         <!-- {{singleCar.times}} -->
 
-<div class='inline' *ngIf="singleCar.times === 6" >
-        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-        <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-</div>
+        <div class='inline' *ngIf="singleCar.times === 6" (click)='checked($event)'>
+          <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+          <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+          <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+          <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+          <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+          <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+        </div>
 
 
-<div class='inline' *ngIf="singleCar.times === 5" >
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-</div>
+        <div class='inline' *ngIf="singleCar.times === 5" (click)='checked($event)'>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+        </div>
 
 
-<div class='inline' *ngIf="singleCar.times === 4" >
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-</div>
+        <div class='inline' *ngIf="singleCar.times === 4" (click)='checked($event)'>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+        </div>
 
-<div class='inline' *ngIf="singleCar.times === 3" >
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-</div>
+        <div class='inline' *ngIf="singleCar.times === 3" (click)='checked($event)'>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+        </div>
 
-<div class='inline' *ngIf="singleCar.times === 2" >
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-</div>
+        <div class='inline' *ngIf="singleCar.times === 2" (click)='checked($event)'>
+          <span class='round'>{{singleCar.rutine}}</span>
+          <span class='round'>{{singleCar.rutine}}</span>
+        </div>
 
-<div class='inline' *ngIf="singleCar.times === 1" >
-  <span class='round' (click)='checked($event)' >{{singleCar.rutine}}</span>
-</div>
+        <div class='inline' *ngIf="singleCar.times === 1" (click)='checked($event)'>
+          <span class='round'>{{singleCar.rutine}}</span>
+        </div>
 
-      </span> 
+      </span>
 
       <div class='recovery'>
         <strong>Recovery training :</strong>
         <span class='itemTraining'>
           <!-- {{singleCar.six}} -->
 
-          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
-          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
-          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
-          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
-          <span class='round' (click)='checked($event)' >{{singleCar.rec}}</span>
-          <span class='round' (click)='checked($event)' (click)="showStyle = true" >{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)'>{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)'>{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)'>{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)'>{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)'>{{singleCar.rec}}</span>
+          <span class='round' (click)='checked($event)' (click)="showStyle = true">{{singleCar.rec}}</span>
 
         </span>
       </div>
 
-      <button class='btn btn-danger disabled' [style.display]="getDone()"  (click)='done = true' (click)="remove()">Done</button>
+      <button class='btn btn-danger disabled' [style.display]="getDone()" (click)='done = true' (click)="remove()">Done</button>
 
     </div>
   </div>
