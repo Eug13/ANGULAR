@@ -1,14 +1,16 @@
 <div class="container">
   <div class="row">
     <div class='view' [style.background-color]="getStyle()" [style.display]="allDone()" *ngIf="singleCar.counter === this.nonCounter ">
-      <div>
+      <div class='head'>
         <span class='info'> Week:</span>
-        <span class='item'>{{singleCar.counter}}</span> &nbsp;&nbsp;
-        <span class='info'> Weight:</span>
-        <span class='item'> {{singleCar.name}}</span> &nbsp;&nbsp;
+        <span class='item'>{{singleCar.counter}} of 9</span> &nbsp;&nbsp;
+        <span class='info'> Weight of the week:</span>
+        <span class='item'> {{singleCar.name}} KG</span> &nbsp;&nbsp;
+        <span class='info'> 1 REP MAX Goal:</span>
+        <span class='item'> {{singleCar.final}} KG</span> &nbsp;&nbsp;
       </div>
 
-      <strong>Hard training :</strong>
+      <strong>Hard training : &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {{singleCar.name}} KG</strong>
       <span class='itemTraining'>
 
         <!-- {{singleCar.times}} -->
@@ -59,7 +61,7 @@
       </span>
 
       <div class='recovery'>
-        <strong>Recovery training :</strong>
+        <strong>Recovery training : {{singleCar.first}} KG</strong>
         <span class='itemTraining' *ngIf="singleCar.counter === this.nonCounter ">
           <!-- {{singleCar.six}} -->
 

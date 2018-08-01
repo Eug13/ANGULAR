@@ -33,7 +33,49 @@ export class ViewCarComponent implements OnInit{
       localStorage.setItem('checked', JSON.stringify(this.check));
     
     }
-    console.log(this.singleCar.counter)
+
+    if(this.singleCar.counter === 5){
+      if (this.count === 5) {
+        this.check='new'
+        localStorage.setItem('checked', JSON.stringify(this.check));
+      
+      }
+    }
+
+    if(this.singleCar.counter === 6){
+      if (this.count === 4) {
+        this.check='new'
+        localStorage.setItem('checked', JSON.stringify(this.check));
+      
+      }
+    }
+
+    if(this.singleCar.counter === 7){
+      if (this.count === 3) {
+        this.check='new'
+        localStorage.setItem('checked', JSON.stringify(this.check));
+      
+      }
+    }
+
+    if(this.singleCar.counter === 8){
+      if (this.count === 2) {
+        this.check='new'
+        localStorage.setItem('checked', JSON.stringify(this.check));
+      
+      }
+    }
+    if(this.singleCar.counter === 9){
+      if (this.count === 1) {
+        this.check='new'
+        localStorage.setItem('checked', JSON.stringify(this.check));
+      
+      }
+    }
+
+
+
+    console.log(this.singleCar)
   }
 
 
@@ -72,11 +114,16 @@ export class ViewCarComponent implements OnInit{
       rec: null
     });
 
+  
+
     this.count = 0;
     
     console.log(this.nonCounter)
     this.nonCounter++;
     localStorage.setItem('nonCounter', JSON.stringify(this.nonCounter));
+    if(this.singleCar.counter === 9){
+      localStorage.clear();
+    }
     window.location.reload();
   }
 

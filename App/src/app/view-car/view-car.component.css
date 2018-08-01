@@ -1,14 +1,14 @@
 .view{
     margin:20px 0;
     padding:20px;
-    border:1px solid white;
+    border:1px solid #121212;
     border-radius:5px 5px 5px 5px;
     width:100%;
     background-color: #222223;
 }
 
 strong{
-    color:white;
+    color:red;
     font-size: 25px;
     display: inline-block;
     width:320px;
@@ -18,13 +18,16 @@ strong{
 .info{
     color:white;
     font-size: 25px;
-    margin-right:10px;
+    margin-right:20px;
+    padding-left:20px;
     width:320px;
+    text-transform: uppercase;
 }
 
 .item{
     font-size: 30px;
     color:red;
+    margin-right:2%;
 }
 .itemTraining{
     color:lightblue;
@@ -32,7 +35,7 @@ strong{
 }
 
 .round{
-    color:lightblue;
+    color:white;
     font-size: 25px;
     display: inline-block;
     width: 40px;
@@ -68,4 +71,13 @@ strong{
 .inline{
     display: inline-block;
     
+}
+
+.head{
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 30px;
+    margin-top:-20px;
+    padding:10px;
+    background-color: #121212;
 }

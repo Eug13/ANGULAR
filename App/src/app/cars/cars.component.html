@@ -2,11 +2,11 @@
  
 
   <app-input-car (newCar)='updateCar($event)'></app-input-car>
-  <button class='btn btn-primary' (click)='clear()'>Clear</button>
+ 
 
   <app-view-car *ngFor='let car of cars' (delCar)='deleteCar($event)' [singleCar]='car'></app-view-car>
 
   <!-- <app-view-car1 *ngFor='let car of cars' [singleCar]='car'></app-view-car1> -->
 
-
+   <button class='btn btn-default full' (click)='clear()'>CLEAR</button>
 </div>

@@ -12,7 +12,7 @@ export class InputCarComponent {
 
 
 
-  @Output('newCar') newCar = new EventEmitter<{ name: number,counter:number,times:number,rutine:number,six:number,rec:number }>();
+  @Output('newCar') newCar = new EventEmitter<{ name: number,counter:number,times:number,rutine:number,six:number,rec:number,final:number ,first:number}>();
 
   addCar() {
     let count = 1;
@@ -25,11 +25,12 @@ export class InputCarComponent {
     let rec = Number(2);
     let rutine = Number(2);
     let six = Number(6);
-    // let goal = input*(80+5)/100;
+    let final = input*105/100;
+    let first = input*80/100 ;
 
     while (count < 5) {
       rutine++
-      this.createWeeks(count,weight,times,rutine,six,rec)
+      this.createWeeks(count,weight,times,rutine,six,rec,final,first)
       count++
     }
 
@@ -38,7 +39,7 @@ export class InputCarComponent {
       goal = input*step/100;
       times--
       rutine--
-      this.createWeeks(count,goal,times,rutine,six,rec)
+      this.createWeeks(count,goal,times,rutine,six,rec,final,first)
       count++
       step+=5;
     }
@@ -46,7 +47,7 @@ export class InputCarComponent {
 
   }
 
-  createWeeks(count,goal,times,rutine,six,rec) {
+  createWeeks(count,goal,times,rutine,six,rec,final,first) {
 
 
     this.newCar.emit({
@@ -55,7 +56,9 @@ export class InputCarComponent {
       times:times,
       rutine:rutine,
       six:six,
-      rec:rec
+      rec:rec,
+      final:final,
+      first:first
     });
     // this.carName = null;
   }
