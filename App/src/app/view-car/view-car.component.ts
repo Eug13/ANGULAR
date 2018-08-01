@@ -19,6 +19,7 @@ export class ViewCarComponent implements OnInit{
   showStyle: false;
   done: false;
   public count: number = 0;
+  nonCounter = 1;
   // dataArr = [];
   check=''
  
@@ -30,8 +31,9 @@ export class ViewCarComponent implements OnInit{
     if (this.count === 6) {
       this.check='new'
       localStorage.setItem('checked', JSON.stringify(this.check));
+    
     }
-    console.log()
+    console.log(this.singleCar.counter)
   }
 
 
@@ -71,13 +73,22 @@ export class ViewCarComponent implements OnInit{
     });
 
     this.count = 0;
+    
+    console.log(this.nonCounter)
+    this.nonCounter++;
+    localStorage.setItem('nonCounter', JSON.stringify(this.nonCounter));
+    window.location.reload();
   }
 
 ngOnInit(){
   if(localStorage.getItem('checked')){
     this.check = JSON.parse(localStorage.getItem('checked'));
+
   // console.log(localStorage.getItem('array'));
   // localStorage.clear()
+  }
+  if(localStorage.getItem('nonCounter')){
+    this.nonCounter = JSON.parse(localStorage.getItem('nonCounter'));
   }
 }
 

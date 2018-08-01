@@ -13,52 +13,54 @@
 
         <!-- {{singleCar.times}} -->
 
-        <div class='inline' *ngIf="singleCar.times === 6" (click)='checked($event)'>
+        <div class='inline' *ngIf="singleCar.times === 6 && singleCar.counter === this.nonCounter "  (click)='checked($event)'>
+     
           <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
           <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
           <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
           <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
           <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
           <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+         
         </div>
 
 
-        <div class='inline' *ngIf="singleCar.times === 5" (click)='checked($event)'>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
+        <div class='inline' *ngIf="singleCar.times === 5 && singleCar.counter === this.nonCounter" (click)='checked($event)'>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
         </div>
 
 
-        <div class='inline' *ngIf="singleCar.times === 4" (click)='checked($event)'>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
+        <div class='inline' *ngIf="singleCar.times === 4 && singleCar.counter === this.nonCounter" (click)='checked($event)'>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
         </div>
 
-        <div class='inline' *ngIf="singleCar.times === 3" (click)='checked($event)'>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
+        <div class='inline' *ngIf="singleCar.times === 3 && singleCar.counter === this.nonCounter" (click)='checked($event)'>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
         </div>
 
-        <div class='inline' *ngIf="singleCar.times === 2" (click)='checked($event)'>
-          <span class='round'>{{singleCar.rutine}}</span>
-          <span class='round'>{{singleCar.rutine}}</span>
+        <div class='inline' *ngIf="singleCar.times === 2 && singleCar.counter === this.nonCounter" (click)='checked($event)'>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
         </div>
 
-        <div class='inline' *ngIf="singleCar.times === 1" (click)='checked($event)'>
-          <span class='round'>{{singleCar.rutine}}</span>
+        <div class='inline' *ngIf="singleCar.times === 1 && singleCar.counter === this.nonCounter" (click)='checked($event)'>
+            <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
         </div>
 
       </span>
 
       <div class='recovery'>
         <strong>Recovery training :</strong>
-        <span class='itemTraining'>
+        <span class='itemTraining' *ngIf="singleCar.counter === this.nonCounter ">
           <!-- {{singleCar.six}} -->
 
           <span class='round' (click)='checked($event)'>{{singleCar.rec}}</span>

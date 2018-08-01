@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CarsComponent implements OnInit {
 
   cars = [];
+  first = this.cars[0];
   constructor() { }
 
   updateCar(car: { name: number, counter: number }) {
