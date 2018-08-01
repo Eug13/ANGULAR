@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class='view' [style.background-color]="getStyle()" [style.display]="allDone()" *ngIf="singleCar.counter === this.nonCounter ">
+      <h3 class='cong' *ngIf="this.message">{{this.message}}</h3>
       <div class='head'>
         <span class='info'> Week:</span>
         <span class='item'>{{singleCar.counter}} of 9</span> &nbsp;&nbsp;
