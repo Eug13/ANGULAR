@@ -3,16 +3,22 @@
     <div class='view' [style.background-color]="getStyle()" [style.display]="allDone()" *ngIf="singleCar.counter === this.nonCounter ">
       <h3 class='cong' *ngIf="this.message">{{this.message}}</h3>
       <div class='head'>
+      <div class="lines">
         <span class='info'> Week:</span>
-        <span class='item'>{{singleCar.counter}} of 9</span> &nbsp;&nbsp;
+        <span class='item'>{{singleCar.counter}} of 9</span> &nbsp;
+      </div>
+      <div class="lines">
         <span class='info'> Weight of the week:</span>
-        <span class='item'> {{singleCar.name}} KG</span> &nbsp;&nbsp;
+        <span class='item'> {{singleCar.name}} KG</span> &nbsp;
+      </div>
+      <div class="lines">
         <span class='info'> 1 REP MAX Goal:</span>
-        <span class='item'> {{singleCar.final}} KG</span> &nbsp;&nbsp;
+        <span class='item'> {{singleCar.final}} KG</span> &nbsp;
+      </div>
       </div>
 
       <strong>Hard training : &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {{singleCar.name}} KG &nbsp;&nbsp;DAY 1</strong>
-      <span class='itemTraining'>
+      <div class='itemTraining'>
 
         <!-- {{singleCar.times}} -->
 
@@ -59,7 +65,7 @@
             <span class='round {{ this.check }}' >{{singleCar.rutine}}</span>
         </div>
 
-      </span>
+      </div>
 
       <div class='recovery'>
         <strong>Recovery training : {{singleCar.first}} KG &nbsp;&nbsp;DAY 2</strong>

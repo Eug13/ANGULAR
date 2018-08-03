@@ -7,8 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input-car.component.css']
 })
 
-export class InputCarComponent {
+export class InputCarComponent implements OnInit{
   carName = null;
+  inputCalc = false;
 
 
 
@@ -44,7 +45,8 @@ export class InputCarComponent {
       step+=5;
     }
     this.carName = null;
-
+    this.inputCalc = true;
+    localStorage.setItem('inputCalc', JSON.stringify(this.inputCalc));
   }
 
   createWeeks(count,goal,times,rutine,six,rec,final,first) {
@@ -64,8 +66,18 @@ export class InputCarComponent {
   }
 
 
+  allHide() {
+    if (this.inputCalc) {
+      return "none";
+    } else {
+      return "";
+    }
+  }
 
-
-
+ngOnInit(){
+  if (localStorage.getItem('inputCalc')) {
+    this.inputCalc = JSON.parse(localStorage.getItem('inputCalc'));
+  }
+}
 
 }

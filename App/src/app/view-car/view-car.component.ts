@@ -125,7 +125,8 @@ export class ViewCarComponent implements OnInit {
     console.log(this.nonCounter)
     this.nonCounter++;
     localStorage.setItem('nonCounter', JSON.stringify(this.nonCounter));
-
+    const input = true;
+    localStorage.setItem('inputCalc', JSON.stringify(input));
     if (this.singleCar.counter === 9) {
       localStorage.clear();
     }
@@ -142,6 +143,7 @@ export class ViewCarComponent implements OnInit {
     if (localStorage.getItem('nonCounter')) {
       this.nonCounter = JSON.parse(localStorage.getItem('nonCounter'));
     }
+
   }
 
 
