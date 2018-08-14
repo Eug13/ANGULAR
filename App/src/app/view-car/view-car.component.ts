@@ -17,7 +17,6 @@ export class ViewCarComponent implements OnInit {
   }
 
   private targetClass: string = 'current';
-
   showStyle: false;
   done: false;
   public count: number = 0;
@@ -78,8 +77,6 @@ export class ViewCarComponent implements OnInit {
         this.message = '! CONGRATULATIONS THIS IS YOUR LAST TRAINING IN THIS CYCLE !'
       }
     }
-
-    localStorage.setItem('dayName', JSON.stringify(this.dayName));
     
     // console.log(this.singleCar)
     // console.log(this.count)
