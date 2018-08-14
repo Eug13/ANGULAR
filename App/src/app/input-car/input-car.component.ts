@@ -10,10 +10,19 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class InputCarComponent implements OnInit{
   carName = null;
   inputCalc = false;
+  dayHName='';
+  dayRName ='';
 
 
+  @Output('newCar') newCar = new EventEmitter<{ name: number,counter:number,times:number,rutine:number,six:number,rec:number,final:number,dayH:string,dayR:string ,first:number}>();
 
-  @Output('newCar') newCar = new EventEmitter<{ name: number,counter:number,times:number,rutine:number,six:number,rec:number,final:number ,first:number}>();
+
+setHDay(e){
+  this.dayHName = e.target.value;
+}
+setRDay(e){
+  this.dayRName = e.target.value;
+}
 
   addCar() {
     let count = 1;
@@ -28,10 +37,12 @@ export class InputCarComponent implements OnInit{
     let six = Number(6);
     let final = input*105/100;
     let first = input*80/100 ;
+    let dayH = this.dayHName;
+    let dayR = this.dayRName;
 
     while (count < 5) {
       rutine++
-      this.createWeeks(count,weight,times,rutine,six,rec,final,first)
+      this.createWeeks(count,weight,times,rutine,six,rec,final,first,dayH,dayR)
       count++
     }
 
@@ -40,7 +51,7 @@ export class InputCarComponent implements OnInit{
       goal = input*step/100;
       times--
       rutine--
-      this.createWeeks(count,goal,times,rutine,six,rec,final,first)
+      this.createWeeks(count,goal,times,rutine,six,rec,final,first,dayH,dayR)
       count++
       step+=5;
     }
@@ -49,7 +60,7 @@ export class InputCarComponent implements OnInit{
     localStorage.setItem('inputCalc', JSON.stringify(this.inputCalc));
   }
 
-  createWeeks(count,goal,times,rutine,six,rec,final,first) {
+  createWeeks(count,goal,times,rutine,six,rec,final,first,dayH,dayR) {
 
 
     this.newCar.emit({
@@ -60,7 +71,9 @@ export class InputCarComponent implements OnInit{
       six:six,
       rec:rec,
       final:final,
-      first:first
+      first:first,
+      dayH:dayH,
+      dayR:dayR
     });
     // this.carName = null;
   }

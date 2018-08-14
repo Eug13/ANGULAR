@@ -9,6 +9,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 export class ViewCarComponent implements OnInit {
 
+
   @Output('delCar') delCar = new EventEmitter<{ name: number, counter: number, times: number, rutine: number, six: number, rec: number }>();
   @Input('singleCar') singleCar: { name: number, counter: number, times: number, six: number };
 
@@ -16,6 +17,7 @@ export class ViewCarComponent implements OnInit {
   }
 
   private targetClass: string = 'current';
+
   showStyle: false;
   done: false;
   public count: number = 0;
@@ -23,6 +25,7 @@ export class ViewCarComponent implements OnInit {
   // dataArr = [];
   check = '';
   message = '';
+
 
 
   checked(event) {
@@ -76,10 +79,10 @@ export class ViewCarComponent implements OnInit {
       }
     }
 
-
-
-    console.log(this.singleCar)
-    console.log(this.count)
+    localStorage.setItem('dayName', JSON.stringify(this.dayName));
+    
+    // console.log(this.singleCar)
+    // console.log(this.count)
   }
 
 

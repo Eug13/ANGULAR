@@ -6,15 +6,20 @@
     width:100%;
     background-color: #222223;
 }
-
+.day{
+    color:orange;
+}
 strong{
     color:red;
     font-size: 25px;
     display: inline-block;
-    width:100%;
+    width:60%;
     margin-right:10px;
 }
-
+select{
+    width:26%;
+    float:right;
+}
 .info{
     color:white;
     font-size: 25px;
@@ -55,6 +60,7 @@ strong{
 .new{
     background-color: red;
     color:white;
+    display: inline-block;
 }
 
 .recovery{
